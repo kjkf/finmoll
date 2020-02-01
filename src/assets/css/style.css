@@ -1,0 +1,328 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+ * v2.0 | 20110126
+ * License: none (public domain) */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, sub, sup, tt, var, u, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* main fonts var */
+/***************************** general style **************************** */
+*:focus, *:active {
+  outline: none !important;
+}
+
+html {
+  overflow: hidden;
+  font-size: 20px;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  color: #1C1C1C;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: #FFFFFF;
+  letter-spacing: 0.02em;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  max-width: 100%;
+  width: 1200px;
+}
+
+.row {
+  margin-left: -15px;
+  margin-right: -15px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center;
+}
+
+.f-row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto/Roboto-Medium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "RobotoSlab";
+  src: url("../fonts/Roboto_Slab/static/RobotoSlab-Bold.ttf") format("truetype");
+  font-style: bold;
+  font-weight: normal;
+}
+.f-header {
+  max-width: 1920px;
+  padding: 16px 100px 22px;
+  background-color: #FFFFFF;
+  box-shadow: 0px 2px 30px rgba(0, 0, 0, 0.15);
+}
+@media screen and (min-width: 1200px) {
+  .f-header {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+.f-nav {
+  font-size: 14px;
+  line-height: 16px;
+  color: #828282;
+  text-transform: uppercase;
+}
+.f-nav--right {
+  margin-left: auto;
+}
+.f-nav__link {
+  color: #828282;
+}
+
+.f-location {
+  font-size: 14px;
+  line-height: 16px;
+  color: #828282;
+  text-transform: uppercase;
+}
+.f-location__item {
+  margin-left: 7px;
+}
+
+.f-contact {
+  font-size: 14px;
+  line-height: 16px;
+  color: #828282;
+}
+.f-contact__phone {
+  color: #43AC34;
+  font-size: 22px;
+}
+
+.f-menu {
+  font-size: 18px;
+  line-height: 22px;
+}
+.f-menu__item {
+  border-bottom: 3px solid #43AC34;
+}
+.f-menu__link {
+  color: #1C1C1C;
+}
+
+.f-uProfile {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -moz-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-left: auto;
+  font-size: 18px;
+  line-height: 22px;
+}
+.f-uProfile__item {
+  color: #1C1C1C;
+  border-bottom: 3px solid #43AC34;
+  margin-left: 25px;
+}
+
+.f-logo {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -moz-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 195px;
+  height: 37px;
+}
+
+.f-ic {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -moz-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  background-image: url(../images/header_sprite.svg);
+  background-size: cover;
+  background-color: transparent;
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+}
+.f-ic--phone {
+  background-position-y: -55px;
+}
+.f-ic--user {
+  background-position-y: -120px;
+  margin-left: 50px;
+}
+.f-ic--location {
+  width: 18px;
+  height: 18px;
+  background-position-y: -1px;
+}
+
+.f-header__nav {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.f-header__nav .f-nav__item {
+  margin-right: 27px;
+}
+@media screen and (min-width: 1200px) {
+  .f-header__nav .f-nav__item {
+    margin-right: 10px;
+  }
+}
+.f-header__nav .f-nav__item:last-child {
+  margin-right: 0px;
+}
+.f-header__location {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 50px;
+}
+.f-header__location .f-location__item {
+  -webkit-align-self: center;
+  -moz-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+.f-header .f-nav--right .f-nav__item {
+  margin-right: 22px;
+}
+@media screen and (min-width: 1200px) {
+  .f-header .f-nav--right .f-nav__item {
+    margin-right: 10px;
+  }
+}
+.f-header .f-nav--right .f-nav__item:last-child {
+  margin-right: 0px;
+}
+.f-header__contact {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 43px;
+}
+@media screen and (min-width: 1200px) {
+  .f-header__contact {
+    margin-right: 5px;
+  }
+}
+.f-header__contact .f-contact__text {
+  margin-right: 18px;
+}
+.f-header__menu {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 80px;
+}
+.f-header__menu .f-menu__item {
+  margin-right: 57px;
+}
+.f-header__menu .f-menu__item:last-child {
+  margin-right: 0px;
+}
+.f-header .f-row {
+  margin-bottom: 40px;
+}
+.f-header .f-row:last-child {
+  margin-bottom: 0px;
+}
