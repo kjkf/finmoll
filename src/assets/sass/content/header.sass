@@ -1,11 +1,17 @@
 .f-header
-	max-width: 1920px
-	padding: 16px 100px 22px
+	width: 100%
+	padding: 16px 0px 22px
 	background-color: $headerBgCol
-	box-shadow: 0px 2px 30px rgba(0, 0, 0, 0.15)	
-	+large
-		padding-left: 0px
-		padding-right: 0px		
+	box-shadow: 0px 2px 30px rgba(0, 0, 0, 0.15)
+	&__inner
+		max-width: calc(1920px - 200px)
+		width: 100%
+		padding-left: 100px
+		padding-right: 100px
+		margin: 0 auto
+		+tablet-down
+			padding-left: 0px
+			padding-right: 0px
 
 .f-nav
 	font-size: $fontSizeHeaderTop
@@ -14,25 +20,27 @@
 	text-transform: uppercase
 	&--right
 		margin-left: auto
+		+medium-down
+			margin-left: unset
 	&__link
-		color: $fontColorHeaderTop		
+		color: $fontColorHeaderTop
 
 .f-location
 	font-size: $fontSizeHeaderTop
 	line-height: $lineHeightHeaderTop
 	color: $fontColorHeaderTop
-	text-transform: uppercase	
+	text-transform: uppercase
 	&__item
 		margin-left: 7px
 
-.f-contact	
+.f-contact
 	font-size: $fontSizeHeaderTop
 	line-height: $lineHeightHeaderTop
 	color: $fontColorHeaderTop
 	&__phone
 		color: $headerAcsentCol
 		font-size: $lineSizePhone
-		//line-height: $lineHeightPhone
+//line-height: $lineHeightPhone
 
 .f-menu
 	font-size: $fontSizeHeaderMenu
@@ -46,7 +54,7 @@
 	+inline-flex
 	margin-left: auto
 	font-size: $fontSizeHeaderMenu
-	line-height: $lineHeightHeaderMenu	
+	line-height: $lineHeightHeaderMenu
 	&__item
 		color: $fontColorMain
 		border-bottom: 3px solid $headerAcsentCol
@@ -74,38 +82,39 @@
 	&--user
 		background-position-y: -120px
 		margin-left: 50px
+		+phone
+			background-position-y: -123px
 	&--location
 		width: 18px
 		height: 18px
-		background-position-y: -1px		
+		background-position-y: -1px
 
 
 .f-header
 	&__nav
 		+flexbox
+		margin-bottom: 10px
 		.f-nav__item
 			margin-right: 27px
-			+large
-				margin-right: 10px
 			&:last-child
 				margin-right: 0px
 	&__location
 		+flexbox
 		margin-left: 50px
+		margin-bottom: 10px
 		.f-location__item
 			+align-self(center)
 	.f-nav--right
 		.f-nav__item
 			margin-right: 22px
-			+large
-				margin-right: 10px
 			&:last-child
-				margin-right: 0px			
+				margin-right: 0px
 	&__contact
-		+flexbox	
+		+flexbox
 		margin-left: 43px
-		+large
-			margin-right: 5px		
+		margin-bottom: 10px
+		+large-down
+			margin-left: auto
 		.f-contact__text
 			margin-right: 18px
 	&__menu
@@ -113,19 +122,17 @@
 		margin-left: 80px
 		.f-menu__item
 			margin-right: 57px
-			+large
-				//margin-right: 10px
 			&:last-child
-				margin-right: 0px					
+				margin-right: 0px
 		+phone
-			//display: none				
+			display: none
 	.f-row
-		margin-bottom: 40px
+		margin-bottom: 30px
 		&:last-child
 			margin-bottom: 0px
 		&:first-child
 			+phone
-				//display: none
+				display: none
 	.f-uProfile__item
 		+phone
-			//display: none
+			display: none
