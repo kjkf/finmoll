@@ -1,0 +1,45 @@
+.btn
+  display: inline-block
+  text-align: center
+  white-space: nowrap
+  vertical-align: middle
+  -ms-touch-action: manipulation
+  touch-action: manipulation
+  +box_shadow(0)
+  +border-radius(0)
+  border: 1px solid transparent
+  background-color: transparent
+  cursor: pointer
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+
+.btn-gamburg
+  margin: 0px
+  width: 23px
+  height: 23px
+  background-image: url(../images/ic_menu.svg)
+  background-size: cover
+  background-repeat: no-repeat
+
+.btn-close
+  padding: 0px
+  width: 13px
+  height: 13px
+  -webkit-border-radius: 0
+  -moz-border-radius: 0
+  border-radius: 0
+  opacity: 0.8
+  box-shadow: none
+  background-color: transparent
+  background-image: url(../images/ic_close.svg)
+  background-repeat: no-repeat
+  background-size: cover
+  position: absolute
+  top: -10px
+  right: calc(-245px - 25px - 80px + 10px)
+  z-index: 1
+  display: none
+  +phone
+    display: inline-block

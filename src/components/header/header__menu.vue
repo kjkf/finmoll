@@ -1,7 +1,13 @@
 <template>
-    <ul class="f-menu f-header__menu">
-        <li class="f-menu__item" v-for="item in menuItems" :key="item"><a href="#" class="f-menu__link">{{item}}</a></li>
-    </ul>
+    <div class="f-menu_outer">
+        <button type="button" class="btn btn-gamburg" id="btn_gamburg"></button>
+        <div class="f-menu_wrap">
+            <button type="button" class="btn btn-close" id="btn_close"></button>
+            <ul class="f-menu f-header__menu">
+                <li class="f-menu__item" v-for="item in menuItems" :key="item"><a href="#" class="f-menu__link">{{item}}</a></li>
+            </ul>
+        </div>
+    </div>
 </template>
 
 <script>

@@ -4,14 +4,21 @@
 	background-color: $headerBgCol
 	box-shadow: 0px 2px 30px rgba(0, 0, 0, 0.15)
 	&__inner
-		max-width: calc(1920px - 200px)
-		width: 100%
+		width: calc(1920px - 200px)
+		max-width: 100%
 		padding-left: 100px
 		padding-right: 100px
 		margin: 0 auto
-		+tablet-down
-			padding-left: 0px
+		+phone
+			padding-left: 10px
 			padding-right: 0px
+		+tablet
+			width: calc(#{$tablet-width} - 200px)
+		+medium
+			width: calc(#{$medium-width} - 200px)
+		+large
+			width: calc(#{$large-width} - 200px)
+
 
 .f-nav
 	font-size: $fontSizeHeaderTop
@@ -84,6 +91,9 @@
 		margin-left: 50px
 		+phone
 			background-position-y: -123px
+			margin-left: 30px
+		+phone_min
+			margin-left: 5px
 	&--location
 		width: 18px
 		height: 18px
@@ -125,14 +135,42 @@
 			&:last-child
 				margin-right: 0px
 		+phone
-			display: none
+			//display: none
+			position: absolute
+			flex-direction: column
+			height: 124px
+			top: -20px
+			left: 25px
+			background-color: #F8FAFB
+			padding: 40px
+			margin-left: 0px
+			width: 245px
 	.f-row
 		margin-bottom: 30px
 		&:last-child
 			margin-bottom: 0px
+			+justify-content(space-between)
 		&:first-child
 			+phone
 				display: none
 	.f-uProfile__item
 		+phone
 			display: none
+
+.f-menu_outer, .f-menu_wrap
+	+flexbox
+	+align-items(center)
+
+.f-logo
+	+phone
+		order: 2
+.f-menu_outer
+	+phone
+		order: 1
+.f-uProfile
+	+phone
+		order: 3
+		margin-left: 0px
+
+.f-menu_wrap
+	position: relative
