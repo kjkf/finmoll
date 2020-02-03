@@ -1,10 +1,12 @@
 .f-header
 	width: 100%
-	padding: 16px 0px 22px
+	padding: 0px
 	background-color: $headerBgCol
 	box-shadow: 0px 2px 30px rgba(0, 0, 0, 0.15)
 	&__inner
-		width: calc(1920px - 200px)
+		+flexbox
+		+flex-wrap(wrap)
+		width: calc(1920px)
 		max-width: 100%
 		padding-left: 100px
 		padding-right: 100px
@@ -12,12 +14,15 @@
 		+phone
 			padding-left: 10px
 			padding-right: 0px
+			+justify-content(space-between)
 		+tablet
-			width: calc(#{$tablet-width} - 200px)
+			width: calc(#{$tablet-width})
 		+medium
-			width: calc(#{$medium-width} - 200px)
+			width: calc(#{$medium-width})
 		+large
-			width: calc(#{$large-width} - 200px)
+			width: calc(#{$large-width})
+		+extra_large
+			width: calc(#{$extra_large-width})
 
 
 .f-nav
@@ -29,8 +34,15 @@
 		margin-left: auto
 		+medium-down
 			margin-left: unset
+	&__item
+		+inline-flex
+		+align-items(center)
+		&.active, &:hover, &:active
+			.f-nav__link
+				color: $navActiveCol
 	&__link
 		color: $fontColorHeaderTop
+
 
 .f-location
 	font-size: $fontSizeHeaderTop
@@ -65,11 +77,22 @@
 	&__item
 		color: $fontColorMain
 		border-bottom: 3px solid $headerAcsentCol
-		margin-left: 25px
-
+		+align-self(center)
+	&-menu
+		+flexbox
+		+align-items(center)
+		&__item
+			+flexbox
+			+align-items(center)
+			height: 100%
+			padding: 13px 25px
+			border-left: 1px solid $headerLineCol
+			+phone
+				padding: 0px 12px
 
 .f-logo
 	+inline-flex
+	+align-self(center)
 	width: 195px
 	height: 37px
 
@@ -81,19 +104,20 @@
 	background:
 		image: url(../images/header_sprite.svg)
 		size: cover
-		color: transparent
+		color: aqua
 		position: 0px 0px
 		repeat: no-repeat
+	+phone
+		width: 23px
+		height: 23px
 	&--phone
-		background-position-y: -55px
-	&--user
-		background-position-y: -120px
-		margin-left: 50px
+		background-position-y: -52px
 		+phone
-			background-position-y: -123px
-			margin-left: 30px
-		+phone_min
-			margin-left: 5px
+			background-position-y: -39px
+	&--user
+		background-position-y: -124px
+		+phone
+			background-position-y: -89px
 	&--location
 		width: 18px
 		height: 18px
@@ -103,7 +127,7 @@
 .f-header
 	&__nav
 		+flexbox
-		margin-bottom: 10px
+		//margin-bottom: 10px
 		.f-nav__item
 			margin-right: 27px
 			&:last-child
@@ -111,7 +135,7 @@
 	&__location
 		+flexbox
 		margin-left: 50px
-		margin-bottom: 10px
+		//margin-bottom: 10px
 		.f-location__item
 			+align-self(center)
 	.f-nav--right
@@ -122,7 +146,7 @@
 	&__contact
 		+flexbox
 		margin-left: 43px
-		margin-bottom: 10px
+		//margin-bottom: 10px
 		+large-down
 			margin-left: auto
 		.f-contact__text
@@ -138,7 +162,7 @@
 			//display: none
 			position: absolute
 			flex-direction: column
-			height: 124px
+			//height: 124px
 			top: -20px
 			left: 25px
 			background-color: #F8FAFB
@@ -146,16 +170,24 @@
 			margin-left: 0px
 			width: 245px
 	.f-row
-		margin-bottom: 30px
+		padding: 16px 0
+		border-bottom: 1px solid $headerLineCol
 		&:last-child
-			margin-bottom: 0px
+			padding: 12px 0px
+			border-bottom-width: 0px
 			+justify-content(space-between)
+			+phone
+				padding: 8px 0px
 		&:first-child
 			+phone
 				display: none
 	.f-uProfile__item
 		+phone
 			display: none
+	.btn-gamburg
+		display: none
+		+phone
+			display: inline-block
 
 .f-menu_outer, .f-menu_wrap
 	+flexbox
