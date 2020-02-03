@@ -5,16 +5,95 @@
   font-family: $fontRobotoSlab
   font-style: normal
   box-sizing: border-box
+  position: relative
+  &::after, &::before
+    content: ''
+    display: inline-block
+    position: absolute
+    z-index: -1px
+    background:
+      color: transparent
+      repeat: no-repeat
+      size: contain
+    +phone
+      display: none
+  &::after
+    bottom: 0px
+    right: 0px
+  &::before
+    top: 0px
+    left: 0px
 
 .f-banner-container
   margin: 0 auto
   padding-top: 80px
-  padding-bottom: 145px
+  padding-bottom: 172px
+  background:
+    size: contain
+    position: right bottom
+    repeat: no-repeat
   +phone
     padding-top: 33px
     padding-right: 21px
     padding-bottom: 80px
 
+.f-banner
+  &--1
+    background-color: $sliderBg1
+    &::after
+      width: 287px
+      height: 286px
+      background-image: url(../images/banner_slider_r_1.png)
+      +rotate(180)
+    &::before
+      width: 181px
+      height: 164px
+      background-image: url(../images/banner_slider_l_1.png)
+      +rotate(-90)
+    .f-banner-container
+      background-image: url(../images/banner_slider_1.png)
+      background-size: 55%
+      +phone
+        background-size: 135%
+        background-position-x: center
+  &--2
+    background-color: $sliderBg2
+    &::after
+      width: 188px
+      height: 199px
+      background-image: url(../images/banner_slider_r_2.png)
+    &::before
+      top: -34px
+      left: 34px
+      width: 201px
+      height: 268px
+      background-image: url(../images/banner_slider_l_2.png)
+      background-size: cover
+      +rotate(90)
+    .f-banner-container
+      background-image: url(../images/banner_slider_2.png)
+      background-size: contain
+      background-position-x: 235%
+      +medium_down
+        background-position-x: 800%
+      +phone
+        background-size: 220%
+        background-position-x: center
+  &--3
+    background-color: $sliderBg3
+    &::before
+      width: 243px
+      height: 312px
+      background-image: url(../images/banner_slider_l_3.png)
+      background-size: cover
+      top: unset
+      bottom: 0px
+    .f-banner-container
+      background-image: url(../images/banner_slider_3.png)
+      background-size: initial
+      background-position-y: center
+      +phone
+        background-position: bottom
 
 .f-banner__title
   font-weight: bold
@@ -150,3 +229,22 @@
   .swiper-pagination
     +phone
       position: static
+
+  .swiper-pagination-bullet-custom
+    display: inline-block
+    width: 18px
+    height: 18px
+    background: transparent
+    border: 3px solid #1C1C1C
+    opacity: 1
+    margin-right: 30px
+    &:last-child
+      margin-right: 0
+
+  .swiper-pagination-bullet-custom.swiper-pagination-bullet-active
+    background: $headerAcsentCol
+    border: 3px solid $headerAcsentCol
+
+  .swiper-pagination
+    top: 45%
+    right: 50px

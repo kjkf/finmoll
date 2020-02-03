@@ -124,32 +124,3 @@
         }
     }
 </script>
-
-<style lang="sass">
-    .f-banner--1
-        background: #8E1C57
-    .f-banner--2
-        background: #4FB9E1
-    .f-banner--3
-        background: #6A24DB
-
-    .swiper-pagination-bullet-custom
-        display: inline-block
-        width: 18px
-        height: 18px
-        background: transparent
-        border: 3px solid #1C1C1C
-        opacity: 1
-        margin-right: 30px
-        &:last-child
-            margin-right: 0
-
-    .swiper-pagination-bullet-custom.swiper-pagination-bullet-active
-        background: #43AC34
-        border: 3px solid #43AC34
-
-    .swiper-pagination
-        top: 45%
-        right: 50px
-
-</style>
