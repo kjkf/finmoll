@@ -30,8 +30,8 @@
 </template>
 
 <script>
-    import headerMenu from './header/header__menu';
-    import headerNav from './header/header__nav';
+    import headerMenu from './header/headerMenu';
+    import headerNav from './header/headerNav';
 
     export default {
         components: {
