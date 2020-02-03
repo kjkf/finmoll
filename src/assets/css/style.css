@@ -132,7 +132,7 @@ a {
 }
 @font-face {
   font-family: "RobotoSlab";
-  src: url("../fonts/Roboto_Slab/static/RobotoSlab-Bold.ttf") format("truetype");
+  src: url("../fonts/Roboto_Slab/RobotoSlab-Bold.ttf") format("truetype");
   font-style: bold;
   font-weight: normal;
 }

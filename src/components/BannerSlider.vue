@@ -1,11 +1,5 @@
 <template>
-    <md-card>
-        <md-card-actions>
-            <div class="md-subhead f-banner-slider-buttons-wrapper">
-                <banner-slider-controls :banner="currentBanner"/>
-                <div class="swiper-pagination swiper-pagination-bullets" slot="pagination"></div>
-            </div>
-        </md-card-actions>
+    <md-card class="f-md-card">
         <md-card-media>
             <!-- swiper -->
             <swiper :options="swiperOption" @slideChange="changeSwiperIndex" ref="mySwiper">
@@ -14,6 +8,12 @@
                 </swiper-slide>
             </swiper>
         </md-card-media>
+        <md-card-actions class="container">
+            <div class="md-subhead f-banner-slider-buttons-wrapper">
+                <banner-slider-controls :banner="currentBanner"/>
+                <div class="swiper-pagination swiper-pagination-bullets" slot="pagination"></div>
+            </div>
+        </md-card-actions>
     </md-card>
 </template>
 

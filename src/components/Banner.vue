@@ -1,5 +1,5 @@
 <template>
-    <div class="f-banner-container">
+    <div class="f-banner-container container">
         <banner-title :title="banner.title" />
         <banner-subtitle :subtitle="banner.subtitle" />
         <div class="f-feature-wrap">
