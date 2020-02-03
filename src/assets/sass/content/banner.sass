@@ -10,7 +10,7 @@
     content: ''
     display: inline-block
     position: absolute
-    z-index: -1px
+    z-index: -1
     background:
       color: transparent
       repeat: no-repeat
@@ -43,15 +43,15 @@
     &::after
       width: 287px
       height: 286px
-      background-image: url(../images/banner_slider_r_1.png)
+      background-image: url(../upload/banner_slider_r_1.png)
       +rotate(180)
     &::before
       width: 181px
       height: 164px
-      background-image: url(../images/banner_slider_l_1.png)
+      background-image: url(../upload/banner_slider_l_1.png)
       +rotate(-90)
     .f-banner-container
-      background-image: url(../images/banner_slider_1.png)
+      background-image: url(../upload/banner_slider_1.png)
       background-size: 55%
       +phone
         background-size: 135%
@@ -59,19 +59,19 @@
   &--2
     background-color: $sliderBg2
     &::after
-      width: 188px
+      width: 270px
       height: 199px
-      background-image: url(../images/banner_slider_r_2.png)
+      background-image: url(../upload/banner_slider_r_2.png)
     &::before
       top: -34px
       left: 34px
       width: 201px
       height: 268px
-      background-image: url(../images/banner_slider_l_2.png)
+      background-image: url(../upload/banner_slider_l_2.png)
       background-size: cover
       +rotate(90)
     .f-banner-container
-      background-image: url(../images/banner_slider_2.png)
+      background-image: url(../upload/banner_slider_2.png)
       background-size: contain
       background-position-x: 235%
       +medium_down
@@ -84,12 +84,12 @@
     &::before
       width: 243px
       height: 312px
-      background-image: url(../images/banner_slider_l_3.png)
+      background-image: url(../upload/banner_slider_l_3.png)
       background-size: cover
       top: unset
       bottom: 0px
     .f-banner-container
-      background-image: url(../images/banner_slider_3.png)
+      background-image: url(../upload/banner_slider_3.png)
       background-size: initial
       background-position-y: center
       +phone
@@ -104,6 +104,16 @@
   width: 100%
   +phone
     font-size: 32px
+  //&::after
+    content: ''
+    display: inline-block
+    position: absolute
+    bottom: 0px
+    left: 0px
+    width: 100%
+    height: 10px
+    +border_radius(10px)
+    background-color: red
 
 .f-banner__subtitle
   font-family: $fontRoboto
