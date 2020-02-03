@@ -12,7 +12,7 @@
 
 <script>
     export default {
-        name: "header__menu",
+        name: "f-header-menu",
         data() {
             return {
                 menuItems: ['Рассрочка на покупки', 'Займ в сети kari', 'Займ на дому', 'Погашение']

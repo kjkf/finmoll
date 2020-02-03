@@ -4,7 +4,7 @@
 
 <script>
     export default {
-        name: "bannerSubtitle",
+        name: "fBannerSubtitle",
         props: {
             subtitle: String
         }

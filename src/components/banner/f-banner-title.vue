@@ -4,7 +4,7 @@
 
 <script>
     export default {
-        name: "bannerTitle",
+        name: "fBannerTitle",
         props: {
             title: String
         }

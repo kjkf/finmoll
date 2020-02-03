@@ -6,7 +6,7 @@
 
 <script>
     export default {
-        name: "header__nav",
+        name: "f-header-nav",
         data() {
             return {
                 navs: ['О компании', 'Вопросы и ответы', 'Магазины kari', 'Контакты']

@@ -4,7 +4,7 @@
 
 <script>
     export default {
-        name: "banner__button",
+        name: "f-banner-button",
         props: {
             title: String,
             bg: String

@@ -1,9 +1,9 @@
 <template>
     <div class="f-banner-container container">
-        <banner-title :title="banner.title" />
-        <banner-subtitle :subtitle="banner.subtitle" />
+        <f-banner-title :title="banner.title" />
+        <f-banner-subtitle :subtitle="banner.subtitle" />
         <div class="f-feature-wrap">
-            <banner-feature v-for="(f, i) in banner.features" :key="i"
+            <f-banner-feature v-for="(f, i) in banner.features" :key="i"
                 :featureTitle="f.title"
                 :featureNum="f.num"
                 :featureColor="banner.color"
@@ -13,13 +13,13 @@
 </template>
 
 <script>
-    import bannerTitle from './banner/bannerTitle';
-    import bannerSubtitle from './banner/bannerSubtitle';
-    import bannerFeature from './banner/bannerFeature';
+    import fBannerTitle from './f-banner-title';
+    import fBannerSubtitle from './f-banner-subtitle';
+    import fBannerFeature from './f-banner-feature';
     export default {
-        name: "Banner",
+        name: "f-banner",
         components: {
-            bannerTitle, bannerSubtitle, bannerFeature
+            fBannerTitle, fBannerSubtitle, fBannerFeature
         },
         props: {
             banner: Object

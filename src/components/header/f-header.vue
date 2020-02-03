@@ -3,7 +3,7 @@
 
             <div class="f-row">
                 <div class="f-header__inner">
-                <header-nav/>
+                <f-header-nav/>
                 <div class="f-location f-header__location">
                     <div class="f-ic f-ic--location"></div>
                     <div class="f-location__item">Москва</div>
@@ -20,15 +20,13 @@
             </div>
             <div class="f-row">
                 <div class="f-header__inner">
-                <div class="f-logo f-header__logo"><a href="#"><img src="../assets/images/logo.svg" alt="#"></a></div>
-                <header-menu/>
+                <div class="f-logo f-header__logo"><a href="#"><img src="../../assets/images/logo.svg" alt="#"></a></div>
+                <f-header-menu/>
                 <div class="f-uProfile">
                     <ul class="f-uProfile-menu">
                         <li class="f-uProfile-menu__item"><a href="#" class="f-ic f-ic--phone"></a></li>
                         <li class="f-uProfile-menu__item"><a href="#" class="f-ic f-ic--user"></a></li>
                     </ul>
-                    <!--<div class="f-ic f-ic&#45;&#45;phone"></div>
-                    <div class="f-ic f-ic&#45;&#45;user"></div>-->
                     <a href="#" class="f-uProfile__item">Личный кабинет</a>
                 </div>
                 </div>
@@ -38,12 +36,12 @@
 </template>
 
 <script>
-    import headerMenu from './header/headerMenu';
-    import headerNav from './header/headerNav';
+    import fHeaderMenu from './f-header-menu';
+    import fHeaderNav from './f-header-nav';
 
     export default {
         components: {
-            headerMenu, headerNav
+            fHeaderMenu, fHeaderNav
         }
     }
 </script>

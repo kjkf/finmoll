@@ -1,17 +1,17 @@
 <template>
     <div class="f-slider-controls">
-        <banner-button class="f-banner-control" :title="banner.buttons.title1" :bg="defaultColor" />
+        <f-banner-button class="f-banner-control" :title="banner.buttons.title1" :bg="defaultColor" />
         <div class="f-banner-or f-banner-control">или</div>
-        <banner-button class="f-banner-control" :title="banner.buttons.title2" :bg="banner.color" />
+        <f-banner-button class="f-banner-control" :title="banner.buttons.title2" :bg="banner.color" />
     </div>
 </template>
 
 <script>
-    import bannerButton from './bannerSliderButton'
+    import fBannerButton from './f-banner-slider-button'
     export default {
         name: "bannerSliderControls",
         components: {
-            bannerButton
+            fBannerButton
         },
         props: {
             banner: Object

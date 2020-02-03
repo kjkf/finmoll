@@ -7,7 +7,7 @@
 
 <script>
     export default {
-        name: "bannerFeature",
+        name: "f-banner-feature",
         props: {
             featureTitle: String,
             featureNum: String,
