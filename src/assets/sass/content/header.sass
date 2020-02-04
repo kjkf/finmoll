@@ -20,12 +20,14 @@
 			padding-right: 34px
 		+large
 			width: calc(#{$large-width})
+		+large-down
+			+justify-content(space-between)
 		+extra_large
 			width: calc(#{$extra_large-width})
 		+phone
 			padding-left: 10px
 			padding-right: 0px
-			+justify-content(space-between)
+
 
 
 .f-nav
@@ -193,7 +195,7 @@
 			display: none
 	.btn-gamburg
 		display: none
-		+phone
+		+large-down
 			display: inline-block
 
 .f-menu_outer, .f-menu_wrap
@@ -201,15 +203,18 @@
 	+align-items(center)
 
 .f-logo
-	+phone
+	+large-down
 		order: 2
 .f-menu_outer
-	+phone
+	+large-down
 		order: 1
 .f-uProfile
-	+phone
+	+large-down
 		order: 3
 		margin-left: 0px
 
 .f-menu_wrap
 	position: relative
+	z-index: 2
+	+large-down
+		display: none
