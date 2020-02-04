@@ -15,6 +15,8 @@
       color: transparent
       repeat: no-repeat
       size: contain
+    +large
+      z-index: 0
     +phone
       display: none
   &::after
@@ -27,7 +29,7 @@
 .f-banner-container
   margin: 0 auto
   padding-top: 80px
-  padding-bottom: 172px
+  padding-bottom: 152px
   background:
     size: contain
     position: right bottom
@@ -98,22 +100,31 @@
 .f-banner__title
   font-weight: bold
   font-size: 42px
-  line-height: 42px
+  line-height: 52px
   margin-bottom: 17px
   max-width: 657px
   width: 100%
   +phone
     font-size: 32px
-  //&::after
+
+.f-banner__row
+  display: inline-block
+  position: relative
+  z-index: 1
+  &::after
     content: ''
     display: inline-block
     position: absolute
-    bottom: 0px
-    left: 0px
-    width: 100%
-    height: 10px
-    +border_radius(10px)
-    background-color: red
+    bottom: -2px
+    left: -2.5%
+    width: 105%
+    height: 20px
+    +border_radius(25px)
+    background-color: rgba(28, 28, 28, 0.15)
+    z-index: -1
+    +phone
+      display: none
+
 
 .f-banner__subtitle
   font-family: $fontRoboto
@@ -170,7 +181,21 @@
   //top: 450px
   //left: 275px
   width: 100%
+  +medium-down
+    +flexbox
+    +flex-direction(column)
+    +justify-content(center)
+    padding-left: 34px
+    padding-right: 34px
+  +tablet-down
+    +flex-direction(row)
+    +align-items(center)
+    +justify-content(space-between)
+    padding-left: 62px
+    padding-right: 62px
   +phone
+    +flex-direction(column)
+    +justify-content(center)
     padding: 26px 16px
 
 .f-md-card
@@ -180,9 +205,16 @@
     opacity: 1
 
   .f-slider-controls
-    +flexbox
-    +justify-content
-    align-items: center
+    +inline-flex
+    +justify-content(center)
+    +align-items(center)
+
+    +medium-down
+      +align-self(center)
+      margin-bottom: 55px
+    +tablet-down
+      +flex-direction(column)
+      margin-bottom: 0
     +phone
       +flex-direction(column)
       width: 100%
@@ -194,11 +226,15 @@
     margin-right: 24px
     &:last-child
       margin-right: 0
-    +phone
+    +tablet-down
       margin-right: 0px
-      margin-bottom: 13px
+      margin-bottom: 9px
       &:last-child
-        margin-bottom: 35px
+        margin-bottom: 0px
+    +phone
+      margin-bottom: 11px
+      &:last-child
+        margin-bottom: 29px
 
   .f-banner-button
     font-weight: bold
@@ -213,11 +249,12 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
     border-radius: 8px
     padding: 18px 17px
+    +tablet-down
+      width: 100%
     +phone
       //width: 100%
       padding: 13px 10px
       font-size: 14px
-
 
 
     &--bg-kari
@@ -237,6 +274,8 @@
 
 
   .swiper-pagination
+    +medium-down
+      position: static
     +phone
       position: static
 

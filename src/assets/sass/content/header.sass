@@ -19,6 +19,9 @@
 			width: calc(#{$tablet-width})
 		+medium
 			width: calc(#{$medium-width})
+		+medium-down
+			padding-left: 34px
+			padding-right: 34px
 		+large
 			width: calc(#{$large-width})
 		+extra_large
@@ -132,12 +135,16 @@
 			margin-right: 27px
 			&:last-child
 				margin-right: 0px
+		+medium-down
+			display: none
 	&__location
 		+flexbox
 		margin-left: 50px
 		//margin-bottom: 10px
 		.f-location__item
 			+align-self(center)
+		+medium-down
+			margin-left: 0px
 	.f-nav--right
 		.f-nav__item
 			margin-right: 22px

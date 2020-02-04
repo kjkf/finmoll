@@ -1,7 +1,7 @@
 <template>
     <h2 class="f-banner__title">
-        <span class="row row-1">{{title[0]}}</span>
-        <span class="row row-2">{{title[1]}}</span>
+        <span class="f-banner__row">{{title[0]}}</span>
+        <span class="f-banner__row">{{title[1]}}</span>
     </h2>
 </template>
 
